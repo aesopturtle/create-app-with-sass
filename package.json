@@ -1,27 +1,30 @@
 {
-  "name": "create-react-app-sass",
-  "version": "1.1.0",
-  "description": "Add sass support to create-react-app.",
-  "main": "./bin/react-scripts-with-sass.js",
-  "bin": {
-    "react-scripts-with-sass": "./bin/react-scripts-with-sass.js"
-  },
-  "scripts": {},
-  "repository": "rickharrison/create-react-app-sass",
-  "keywords": [
-    "create-react-app",
-    "react",
-    "sass"
-  ],
-  "author": "Rick Harrison",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/rickharrison/create-react-app-sass/issues"
-  },
-  "homepage": "https://github.com/rickharrison/create-react-app-sass",
-  "dependencies": {
-    "cross-spawn": "^4.0.2",
-    "find-remove": "^1.0.0",
-    "node-sass": "^3.10.1"
-  }
+    "name": "create-app-with-sass",
+    "version": "1.0.0",
+    "description": "Add sass support to create-react-app and create-inferno-app.",
+    "main": "./index.js",
+    "bin": {
+        "create-app-with-sass": "./index.js"
+    },
+    "scripts": {},
+    "repository": "aesopturtle/create-app-with-sass",
+    "keywords": [
+        "create-react-app",
+        "create-inferno-app",
+        "react",
+        "inferno",
+        "sass",
+        "scss"
+    ],
+    "author": "Sorawit Wanitwarodom",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/aesopturtle/create-app-with-sass/issues"
+    },
+    "homepage": "https://github.com/aesopturtle/create-app-with-sass",
+    "dependencies": {
+        "cross-spawn": "^5.0.1",
+        "find-remove": "^1.0.0",
+        "node-sass": "^4.3.0"
+    }
 }
