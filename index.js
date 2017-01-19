@@ -4,16 +4,18 @@ const findRemove = require('find-remove');
 const path       = require('path');
 const spawn      = require('cross-spawn');
 
-const args = process.argv;
-args.splice(0, 2);
-const runScriptsCommand   = args.shift();
-const runScriptsArguments = args;
-const mainCommand = args.slice(-1);
+const args = process.argv;                  // ['node', 'index.js', 'react-scripts', 'start']
+args.splice(0, 2);                          // => args = ['react-scripts', 'start']
+const runScriptsCommand   = args.shift();   // => react-scripts, args = ['start']
+const runScriptsArguments = args;           // => ['start']
+const mainCommand = args.slice(-1);         // => start
 
 const mainCommands = {
     start: startApp,
     build: buildApp
 };
+
+//region functions
 
 function startApp() {
     removeCss();
@@ -62,6 +64,10 @@ function runScriptsSync() {
     spawn.sync(runScriptsCommand, runScriptsArguments, { stdio: 'inherit' });
 }
 
+//endregion
+
+//region main
+
 if (mainCommand in mainCommands) {
     mainCommands[mainCommand]();
     return;
@@ -70,3 +76,4 @@ if (mainCommand in mainCommands) {
 console.error('Unknown script: ' + mainCommand);
 console.error('Perhaps you meant to run `react-scripts` or `create-app-with-sass react-scripts start`');
 
+//endregion
